@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Random Maze Runner — Web PC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="srmr.css">
+</head>
+<body>
+  <!-- Creator link -->
+  <a class="top-right-link" href="https://github.com/0PKunal/" target="_blank" rel="noopener">Creator</a>
+
+  <header>
+    <h1>🌀 Simple Random Maze Runner — Web PC</h1>
+    <h2 id="levelLabel">Level: 1</h2>
+    <div id="modeSelectorWrap">
+      <label for="modeSelector">Mode: </label>
+      <select id="modeSelector">
+        <option value="1">Single Player</option>
+        <option value="2">Two Player</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <div id="levels">
+      <h3>📊 Levels</h3>
+      <ol id="levelList"></ol>
+    </div>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="leaderboard">
+      <h3>🏆 Leaderboard</h3>
+      <ol id="scores"></ol>
+    </div>
+  </main>
+
+  <footer>
+    <span>SPACE: Start · R: Next Level</span>
+    <button id="resetProgress">Reset Progress</button>
+  </footer>
+
+  <script src="srmr.js"></script>
+</body>
+</html>

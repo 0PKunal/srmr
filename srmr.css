@@ -1,0 +1,107 @@
+
+:root {
+  --panel-w: 200px;
+}
+* { box-sizing: border-box; }
+body {
+  background: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+header {
+  text-align: center;
+  margin: 10px 0 5px 0;
+  position: relative;
+  width: 100%;
+}
+header h1 { margin: 0; font-size: 32px; }
+header h2 { margin: 5px 0 15px 0; font-size: 18px; color: yellow; }
+
+/* Creator button */
+.top-right-link {
+  position: fixed;
+  top: 10px;
+  right: 12px;
+  background: #222;
+  padding: 8px 12px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #333;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  cursor: pointer;
+  z-index: 9999;             /* stay on top of canvas */
+  pointer-events: auto;
+}
+.top-right-link:hover { background: #2d2d2d; }
+
+/* Use grid to keep the canvas perfectly centered between side panels */
+main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: var(--panel-w) 1fr var(--panel-w);
+  align-items: center;        /* vertical centering of all three columns */
+  justify-items: center;      /* horizontal centering of items in columns */
+  gap: 20px;
+  width: 100%;
+}
+
+/* Side panels */
+#levels, #leaderboard {
+  width: 100%;
+  background: #222;
+  padding: 10px;
+  border-radius: 8px;
+  max-height: 100%;           /* prevent overflow out of main */
+  overflow-y: auto;
+}
+#levels h3, #leaderboard h3 {
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+#levels ol, #leaderboard ol {
+  padding-left: 18px;
+  margin: 0;
+}
+#levels li { cursor: pointer; margin: 4px 0; }
+#levels li:hover { color: yellow; }
+
+/* Canvas */
+canvas {
+  background: black;
+  border: none;               /* keep only maze walls, no canvas border */
+  display: block;
+  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 8px 0 12px;
+  color: #aaa;
+  font-size: 12px;
+}
+footer button {
+  background: #222;
+  color: #ddd;
+  border: 1px solid #333;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+footer button:hover { background: #2a2a2a; }
+
+#modeSelectorWrap { margin-top: 8px; }
