@@ -105,3 +105,9 @@ footer button {
 footer button:hover { background: #2a2a2a; }
 
 #modeSelectorWrap { margin-top: 8px; }
+
+/* Source Code button (below Creator) */
+.source-link {
+  top: 55px; /* adjust as needed for spacing */
+}
+
