@@ -43,6 +43,23 @@ header h2 { margin: 5px 0 15px 0; font-size: 18px; color: yellow; }
 }
 .top-right-link:hover { background: #2d2d2d; }
 
+/* Hit Counter */
+#hitCounter {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: rgba(34, 34, 34, 0.8);
+  padding: 5px 8px;
+  border-radius: 8px;
+  z-index: 10000;             /* stay above everything else */
+  pointer-events: auto;
+}
+
+#hitCounter img {
+  display: block;
+  border-radius: 4px;
+}
+
 /* Use grid to keep the canvas perfectly centered between side panels */
 main {
   flex: 1;
